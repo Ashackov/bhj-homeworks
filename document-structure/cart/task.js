@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 
-	function addToCart(productId, productTitle, productImage, quantity) {
+	function addToCart(productId, productImage, quantity) {
 		const existingCartItem = cartProducts.querySelector(`.cart__product[data-id="${productId}"]`);
 		if (existingCartItem) {
 			const cartProductCount = existingCartItem.querySelector(".cart__product-count");
@@ -42,11 +42,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	function handleAddToCart(event) {
 		const product = event.target.closest(".product");
 		const productId = product.getAttribute("data-id");
-		const productTitle = product.querySelector(".product__title").textContent;
 		const productImage = product.querySelector(".product__image").getAttribute("src");
 		const quantityValue = product.querySelector(".product__quantity-value");
 		const quantity = parseInt(quantityValue.textContent, 10);
-		addToCart(productId, productTitle, productImage, quantity);
+		addToCart(productId, productImage, quantity);
 	}
 
 	products.forEach((product) => {
