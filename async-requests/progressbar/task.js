@@ -1,4 +1,4 @@
-const uploadForm = document.getElementById('upload-form');
+const uploadForm = document.getElementById('form');
 const progressBar = document.getElementById('progress');
 
 uploadForm.addEventListener('submit', function(event) {
