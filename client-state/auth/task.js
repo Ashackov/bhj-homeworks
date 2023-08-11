@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
   if (savedUserId) {
     userIdSpan.textContent = savedUserId;
     welcomeBlock.classList.add("welcome_active");
+    signinForm.style.display = "none";
   }
 
   signinForm.addEventListener("submit", async function(event) {
